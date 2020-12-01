@@ -52,6 +52,9 @@ app.delete('/api/notes/:id', (req, res) => {
     }
     return res.json(false);
   })
+
+const PORT = process.env.PORT || 3000;
+
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, () => {
