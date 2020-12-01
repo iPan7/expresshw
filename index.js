@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 1337;
+const PORT = process.env.PORT || 3891;
 const path = require("path");
 const fs = require("fs");
 app.use(express.static('public'));
@@ -52,9 +52,6 @@ app.delete('/api/notes/:id', (req, res) => {
     }
     return res.json(false);
   })
-
-const PORT = process.env.PORT || 3000;
-
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, () => {
